@@ -11,14 +11,14 @@ var engine;
 var world;
 var ball;
 var quadrado;
-var retângulo;
+var retangulo;
 
 function setup() {
     var canvas = createCanvas(500,500);
 
     ball = new Ball(width / 2 + 80, height / 2 - 80, 80, 80);
     quadrado = new Blower(width / 2 - 50, height / 2 + 50, 150, 20);
-    retângulo = new BlowerMouth(width / 2 + 70, height / 2 + 20, 100, 90);
+    retangulo = new BlowerMouth(width / 2 + 70, height / 2 + 20, 100, 90);
     button = createImg('click.png');
     button.position(20,30);
     button.size(50,50);
@@ -36,7 +36,7 @@ function draw() {
 }
 
 function blow() {
-    Matter.Bpdy.applyForce(ball.body, { x: 0, y: 0 }, { x: -0.05, y: 0.05 });
+    Matter.Body.applyForce(ball.body, { x: 0, y: 0 }, { x: -0.05, y: 0.05 });
 }
 
 
